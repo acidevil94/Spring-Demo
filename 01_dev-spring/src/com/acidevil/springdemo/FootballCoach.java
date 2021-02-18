@@ -11,6 +11,11 @@ public class FootballCoach implements Coach {
 		System.out.println("FootballCoach: inside no args costructor");
 	}
 	
+	public FootballCoach(FortuneService fortuneService) {
+		System.out.println("FootballCoach: inside FortuneService costructor");
+		this.fortuneService = fortuneService;
+	}
+	
 	@Override
 	public String getDailyWorkout() {
 		return "Go and run for 50 minutes";
