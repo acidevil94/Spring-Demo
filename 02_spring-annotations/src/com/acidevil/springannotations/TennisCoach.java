@@ -1,5 +1,7 @@
 package com.acidevil.springannotations;
 
+import javax.annotation.PreDestroy;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.annotation.Value;
@@ -54,6 +56,12 @@ public class TennisCoach implements Coach {
 	@Override
 	public String getDailyFortune() {
 		return this.fortuneService.getFortune() + " " + this.email;
+	}
+
+	
+	@PreDestroy
+	public void doMyCleanupStuff() {
+		System.out.println("TennisCoach before destroy");
 	}
 
 }
