@@ -18,4 +18,13 @@ public class TrackCoach implements Coach {
 		return "Just do it: " + this.fortuneService.getFortune();
 	}
 
+	
+	
+	public void doMyStartupStuff() {
+		System.out.println("Starting up...");
+	}
+	
+	public void doMyDestroySuff() {
+		System.out.println("Cleaning up...");
+	}
 }
