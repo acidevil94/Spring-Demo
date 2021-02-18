@@ -2,6 +2,8 @@ package com.acidevil.springannotations;
 
 import javax.annotation.PostConstruct;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
@@ -14,6 +16,10 @@ public class FootballCoach implements Coach {
 	public void doMyStartupStuff() {
 		System.out.println("FootballCoach after costruct");
 	}
+	
+	@Autowired
+	@Qualifier("databaseFortuneService")	// specify which bean to pick
+	private  FortuneService fortuneService;
 	
 	
 	// FIXME NEVER CALLED!!! -> because of type 'prototype'
@@ -29,8 +35,7 @@ public class FootballCoach implements Coach {
 
 	@Override
 	public String getDailyFortune() {
-		// TODO Auto-generated method stub
-		return null;
+		return this.fortuneService.getFortune();
 	}
 
 }
