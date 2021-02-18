@@ -2,3 +2,4 @@
 01_dev-spring/.settings/
 *.classpath
 01_dev-spring/bin/
+02_spring-annotations/.project
