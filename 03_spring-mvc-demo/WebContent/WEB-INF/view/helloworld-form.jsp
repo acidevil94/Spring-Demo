@@ -11,7 +11,7 @@
 	<h2>Spring MVC Demo - Form</h2>
 
 
-	<form action="processFormTwo" method="GET">
+	<form action="processFormThree" method="GET">
 
 
 		<input type="text" name="studentName" placeholder="What's your name?" />
