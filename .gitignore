@@ -3,3 +3,5 @@
 *.classpath
 01_dev-spring/bin/
 02_spring-annotations/.project
+03_spring-mvc-demo/.project
+.settings/
