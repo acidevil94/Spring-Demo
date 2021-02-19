@@ -8,5 +8,6 @@
 	<br/>
 	
 	Student name: ${param.studentName}
+	Message: ${message}
 </body>
 </html>
