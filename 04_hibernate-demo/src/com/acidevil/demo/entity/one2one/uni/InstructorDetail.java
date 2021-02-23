@@ -1,4 +1,4 @@
-package com.acidevil.demo.entity;
+package com.acidevil.demo.entity.one2one.uni;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;

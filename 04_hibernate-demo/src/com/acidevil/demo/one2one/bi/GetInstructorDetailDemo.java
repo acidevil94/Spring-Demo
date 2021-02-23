@@ -1,13 +1,13 @@
-package com.acidevil.demo.one2one;
+package com.acidevil.demo.one2one.bi;
 
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 
-import com.acidevil.demo.entity.Instructor;
-import com.acidevil.demo.entity.InstructorDetail;
+import com.acidevil.demo.entity.one2one.bi.Instructor;
+import com.acidevil.demo.entity.one2one.bi.InstructorDetail;
 
-public class CreateInstructorDemo {
+public class GetInstructorDetailDemo {
 
 	public static void main(String[] args) {
 		// create session factory
@@ -19,16 +19,18 @@ public class CreateInstructorDemo {
 
 		try {
 
-			Instructor instructor = new Instructor("Chad", "Darby", "darby@luv2code.com");
-
-			InstructorDetail detail = new InstructorDetail("http://www.luv2code.com/youtube", "Luv 2 code!");
-
-			instructor.setInstructorDetail(detail);
-
+			
 			System.out.println("beginning trnasaction");
 			session.beginTransaction();
 			
-			session.save(instructor);
+			
+			InstructorDetail detail = session.get(InstructorDetail.class, 2);
+			
+			System.out.println(detail);
+			
+			
+			System.out.println(detail.getInstructor());
+			
 
 			System.out.println("committing");
 			session.getTransaction().commit();
