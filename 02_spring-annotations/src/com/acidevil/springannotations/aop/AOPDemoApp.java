@@ -1,8 +1,11 @@
 package com.acidevil.springannotations.aop;
 
+import java.util.List;
+
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 import com.acidevil.springannotations.aop.dao.AccountDAO;
+import com.acidevil.springannotations.aop.entity.Account;
 
 public class AOPDemoApp {
 
@@ -14,6 +17,9 @@ public class AOPDemoApp {
 		
 		accountDAO.addAccount("testAccount");
 		
+		List<Account> accounts = accountDAO.findAccounts();
+		
+		System.out.println("Finished search, size:" + accounts.size());
 		
 		context.close();
 	}
