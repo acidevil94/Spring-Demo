@@ -12,7 +12,7 @@ public class AOPDemoApp {
 		
 		AccountDAO accountDAO = context.getBean("accountDAO", AccountDAO.class);
 		
-		accountDAO.addAccount();
+		accountDAO.addAccount("testAccount");
 		
 		
 		context.close();
