@@ -14,12 +14,20 @@ public class AOPDemoApp {
 		
 		
 		AccountDAO accountDAO = context.getBean("accountDAO", AccountDAO.class);
+		ThrowComponent throwComp = context.getBean("throwComponent", ThrowComponent.class);
 		
 		accountDAO.addAccount("testAccount");
 		
 		List<Account> accounts = accountDAO.findAccounts();
 		
 		System.out.println("Finished search, size:" + accounts.size());
+		
+		
+		try {
+			throwComp.throwMethod();
+		} catch(Exception exc) {
+			System.out.println("Main program: exception");
+		}
 		
 		context.close();
 	}

@@ -15,4 +15,9 @@ public class AOPExpressions {
 	@Pointcut("execution(public * findAccounts())")
 	public void forFindAccounts() {
 	}
+	
+	
+	@Pointcut("execution(public void throwMethod())")
+	public void forThrowMethod() {
+	}
 }
