@@ -20,4 +20,9 @@ public class AOPExpressions {
 	@Pointcut("execution(public void throwMethod())")
 	public void forThrowMethod() {
 	}
+	
+	
+	@Pointcut("execution(public String getFortune())")
+	public void forGetFortune() {
+	}
 }
