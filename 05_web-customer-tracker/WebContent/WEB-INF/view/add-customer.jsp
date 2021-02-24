@@ -38,6 +38,8 @@
 			method="POST">
 
 
+			<form:hidden path="id"/>
+
 			<table>
 
 				<tbody>
