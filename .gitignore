@@ -7,3 +7,5 @@
 .settings/
 04_hibernate-demo/.project
 05_web-customer-tracker/.project
+06_maven-app/mycoolapp/.project
+07_maven-web-app/mycoolwebapp/.project
