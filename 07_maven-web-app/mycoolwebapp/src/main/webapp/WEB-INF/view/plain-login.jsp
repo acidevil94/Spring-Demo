@@ -25,6 +25,12 @@
 		</c:if>
 
 
+
+		<c:if test="${param.logout != null} ">
+			<i>You have been logged out</i>
+		</c:if>
+
+
 		<p>
 
 			Username: <input type="text" name="username" />
