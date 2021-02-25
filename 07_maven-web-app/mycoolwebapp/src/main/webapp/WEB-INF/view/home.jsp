@@ -9,6 +9,11 @@
 <body>
 
 	<h2>Company Home Page</h2>
+	
+	
+	<br/>
+	
+	<p>Home page for my company</p>
 
 </body>
 </html>
