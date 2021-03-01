@@ -3,11 +3,13 @@ package com.acidevil.springboot.demo.mvcbootdemo.service;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.acidevil.springboot.demo.mvcbootdemo.dao.EmployeeDAO;
 import com.acidevil.springboot.demo.mvcbootdemo.entity.Employee;
 
+@Service
 public class EmployeeServiceImpl implements EmployeeService {
 	
 	
