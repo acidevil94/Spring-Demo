@@ -47,7 +47,8 @@
 		</dependency>
 
 		<!-- This dependency will scan for JpaRepository implementation and auto 
-			creates CRUD REST endpoints for that entities -->
+			creates CRUD REST endpoints for that entities.
+			Indeed, we do not need the EmployeeRestController anymore. -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-data-rest</artifactId>
