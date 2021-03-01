@@ -19,6 +19,12 @@ import com.acidevil.springboot.demo.mvcbootdemo.service.EmployeeService;
 @RequestMapping("/api")
 public class EmployeeRestController {
 
+	/*
+	 * We do not need this class anymore, because we added
+	 * spring-boot-starter-data-rest to our dependency tree, that will scan for
+	 * JpaRepository implementations and auto create CRUD endpoints for the entity
+	 */
+
 	private EmployeeService employeeService;
 
 	@Autowired
